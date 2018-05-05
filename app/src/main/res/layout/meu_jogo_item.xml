@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivFoto"
+            tools:src="@drawable/super_mario_odyssey"
+            android:layout_width="96dp"
+            android:layout_height="100dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Super Mario Odyssey" />
+            <TextView
+                android:id="@+id/tvLancamento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Lançamento: 2017" />
+            <TextView
+                android:id="@+id/tvDescricao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Super Mario Odyssey traz uma nova evolução no estilo de jogo do bigodudo favorito dos video-games!" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
