@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp">
+    android:layout_margin="8dp"
+    >
 
-    <LinearLayout
+    <RelativeLayout
+        android:padding="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -17,24 +19,43 @@
             android:layout_height="100dp" />
 
         <LinearLayout
+            android:layout_toRightOf="@+id/ivFoto"
+            android:layout_toLeftOf="@+id/ivDelete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <TextView
-                android:id="@+id/tvTitulo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Super Mario Odyssey" />
+                tools:text="@string/titulo_super_mario_odyssey"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:id="@+id/tvTitulo"/>
+
             <TextView
-                android:id="@+id/tvLancamento"
+                android:textColor="#AAA"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Lançamento: 2017" />
+                tools:text="@string/lancamento"
+                android:id="@+id/tvLancamento"/>
+
             <TextView
-                android:id="@+id/tvDescricao"
+                android:ellipsize="end"
+                android:maxLines="3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Super Mario Odyssey traz uma nova evolução no estilo de jogo do bigodudo favorito dos video-games!" />
+                tools:text="@string/descricao_super_mario_odyssey"
+                android:id="@+id/tvDescricao"/>
         </LinearLayout>
-    </LinearLayout>
+
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/ivDelete"
+            android:src="@drawable/delete"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="8dp"/>
+    </RelativeLayout>
+
 </android.support.v7.widget.CardView>
